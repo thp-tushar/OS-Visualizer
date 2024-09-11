@@ -1,1 +1,1 @@
-# OS-Visualizer
+# OS-Algorithm-Visualizer

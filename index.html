@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Scheduling Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>OS Scheduling Algorithm Visualizer</h1>
+    <div class="input-section">
+        <label for="algorithm">Select Algorithm:</label>
+        <select id="algorithm">
+            <option value="fcfs">First-Come, First-Served (FCFS)</option>
+            <option value="sjf">Shortest Job First (SJF)</option>
+            <option value="srjf">Shortest Remaining Job First (SRJF)</option>
+            <option value="rr">Round Robin</option>
+            <option value="priority">Priority Scheduling</option>
+        </select>
+        <label for="processes">Enter processes (comma-separated):</label>
+        <input type="text" id="processes" placeholder="e.g., P1,P2,P3">
+        <label for="burstTimes">Enter burst times (comma-separated):</label>
+        <input type="text" id="burstTimes" placeholder="e.g., 10,5,8">
+        <label for="arrivalTimes">Enter arrival times (comma-separated):</label>
+        <input type="text" id="arrivalTimes" placeholder="e.g., 0,1,2">
+        <label for="priorities">Enter priorities (comma-separated, for Priority Scheduling):</label>
+        <input type="text" id="priorities" placeholder="e.g., 3,1,2">
+        <label for="timeQuantum">Time Quantum (for Round Robin):</label>
+        <input type="number" id="timeQuantum" value="2">
+        <button onclick="visualize()">Visualize</button>
+    </div>
+    <div id="ganttChart"></div>
+    <div id="averages"></div>
+    <script src="script.js"></script>
+</body>
+</html>
